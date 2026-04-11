@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "D/FkKqI6j2jqEGJcFX1Zo6m2cemkEaYq86kOnO31/uQ=",
+  "Source": "LibraryManagement",
+  "BasePath": "_content/LibraryManagement",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "LibraryManagement/wwwroot",
+      "Source": "LibraryManagement",
+      "ContentRoot": "/opt/LibraryManagement/LibraryManagement/wwwroot/",
+      "BasePath": "_content/LibraryManagement",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/opt/LibraryManagement/LibraryManagement/wwwroot/index.html",
+      "SourceId": "LibraryManagement",
+      "SourceType": "Discovered",
+      "ContentRoot": "/opt/LibraryManagement/LibraryManagement/wwwroot/",
+      "BasePath": "_content/LibraryManagement",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/index.html"
+    }
+  ]
+}
