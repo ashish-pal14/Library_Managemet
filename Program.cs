@@ -13,8 +13,9 @@ builder.Services.AddSwaggerGen();
 // SQL Server connection (Linux compatible)
 builder.Services.AddDbContext<AppDbContext>(options =>
    // options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-     options.UseInMemoryDatabase("LibraryManagementDb"));
-
+   //  options.UseInMemoryDatabase("LibraryManagementDb"));    --> in use memory purpose 
+   //    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));    // We are using the sql server on docker    
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 // Register repositories (scoped)
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<BookRepository>(); // for custom methods

@@ -137,3 +137,4 @@
 /opt/LibraryManagement/LibraryManagement/obj/Debug/net8.0/ref/LibraryManagement.dll
 /opt/LibraryManagement/LibraryManagement/bin/Debug/net8.0/Microsoft.EntityFrameworkCore.InMemory.dll
 /opt/LibraryManagement/LibraryManagement/bin/Debug/net8.0/LibraryManagement.staticwebassets.runtime.json
+/opt/LibraryManagement/LibraryManagement/obj/Debug/net8.0/LibraryManagement.sourcelink.json
