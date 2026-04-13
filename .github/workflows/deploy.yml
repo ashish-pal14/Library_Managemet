@@ -1,0 +1,29 @@
+name: Deploy to App Server (Self-Hosted)
+
+on:
+  push:
+    branches: [ main ]   # triggers when code is pushed to main branch
+
+jobs:
+  deploy:
+    runs-on: self-hosted   # uses the runner you installed on the server
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t library-app:latest .
+
+      - name: Stop and remove old container (if exists)
+        run: |
+          docker stop library-management || true
+          docker rm library-management || true
+
+      - name: Run new container
+        run: |
+          docker run -d \
+            --name library-management \
+            --restart always \
+            -p 5000:80 \
+            -e ConnectionStrings__DefaultConnection="Server=192.168.1.77,1433;Database=LibraryDb;User Id=sa;Password=ashish@123;TrustServerCertificate=true;" \
+            library-app:latest
